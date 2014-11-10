@@ -1,0 +1,71 @@
+*,
+*:after,
+*:before {
+  @include box-sizing(border-box);
+}
+.row{
+	@include rem("max-width", $maxWidth);
+  @include clearfix();
+	margin:0 auto;
+}
+.col_1, .col_2, .col_3, .col_4, .col_5, .col_6, .col_7, .col_8, .col_9, .col_10, .col_11, .col_12{
+    float:left;
+    @include box-sizing(border-box);
+}
+
+.col{
+  margin-left: 1.6%;
+}
+
+.col:first-child{
+  margin-left:0;
+}
+
+.col_1{
+  width: 6.86666666667%;
+  
+}
+.col_2{
+  width: 15.3333333333%;
+  
+}
+.col_3{
+  width: 23.8%;
+  
+}
+.col_4{
+  width: 32.2666666667%;
+  
+}
+.col_5{
+  width: 40.7333333333%;
+  
+}
+.col_6{
+  width: 49.2%;
+  
+}
+.col_7{
+  width: 57.6666666667%;
+  
+}
+.col_8{
+  width: 66.1333333333%;
+  
+}
+.col_9{
+  width: 74.6%;
+  
+}
+.col_10{
+  width: 83.0666666667%;
+  
+}
+.col_11{
+  width: 91.5333333333%;
+  
+}
+.col_12{
+  width: 100%;
+  margin-left: 0;
+}
