@@ -2,9 +2,9 @@ module.exports = function(grunt) {
 
   var globalConfig = {
     language: 'en',
-    data: 'psurvey',
-    template: 'psurvey',
-    directory: 'survey'
+    data: 'welcome',
+    template: 'welcome',
+    directory: 'welcome'
   };
 
   if(grunt.option('lang') != undefined){
@@ -59,17 +59,16 @@ module.exports = function(grunt) {
      },
      'compile-handlebars': {
          allStatic: {
-          templateData: 'emails/content/<%= globalConfig.directory %>/<%= globalConfig.data %>-<%= globalConfig.language %>.json',
-          template: 'emails/templates/<%= globalConfig.directory %>/<%= globalConfig.template %>.handlebars',
+          templateData: 'content/<%= globalConfig.directory %>/<%= globalConfig.data %>-<%= globalConfig.language %>.json',
+          template: 'templates/<%= globalConfig.directory %>/<%= globalConfig.template %>.handlebars',
           output: 'build/<%= globalConfig.directory %>/<%= globalConfig.data %>-<%= globalConfig.language %>.html',
           globals: [
-             'emails/content/footers/legal-footer-<%= globalConfig.language %>.json'
           ],
         },
       },
     jsonlint: {
       sample: {
-        src: [ 'emails/content/**/*.json' ]
+        src: [ 'content/**/*.json' ]
       }
     },
      prettify: {
@@ -97,7 +96,7 @@ module.exports = function(grunt) {
         },
       },
       handlebars:{
-        files: ['emails/templates/**/*.handlebars'],
+        files: ['templates/**/*.handlebars'],
         tasks: ['newer:compile-handlebars'],
         options: { 
             spawn: false
@@ -111,7 +110,7 @@ module.exports = function(grunt) {
         },
       },
       json: {
-        files: ['emails/content/**/*'],
+        files: ['content/**/*'],
         tasks: ['newer:jsonlint'],
         options: {
           spawn: false
