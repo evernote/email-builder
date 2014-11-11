@@ -15,6 +15,22 @@ npm install
 
 Once that's done, you will have added all the npm_modules necessary for the Grunt tasks to run.
 
+## Directories:
+### Templates
+The templates diretory can contain sub-directories that contain handlebars template files.
+
+### Content
+The content diretory can contain sub-directories that contain JSON files that are made up content that feeds into the handlebars templates. Each JSON file has a language code appended to the end of the filename. (Example: welcome-en.json).
+
+### Build
+The build diretory contains the final HTML email files that are compiled from the build. These files shouldn't be edited because the build will overwrite any changes made.
+
+### Sass
+Leveraging the [Evernote SASS Structure Boilerplate](https://github.com/evernote/sass-build-structure) this is where all the Sass files are saved.
+
+### Assets
+The assets directory is where all images and CSS can be stored. If you are using Sass the compiled CSS will automatically be added to the CSS directory.
+
 ### For additional help:
 * [grunt](http://gruntjs.com/)
 * [Getting Started](https://github.com/gruntjs/grunt/blob/devel/docs/getting_started.md)
@@ -26,4 +42,7 @@ Once that's done, you will have added all the npm_modules necessary for the Grun
 * [Grunt Juice Email](https://github.com/disintegrator/grunt-juice-email)
 * [Grunt JSONLint](https://github.com/brandonramirez/grunt-jsonlint)
 * [Grunt Prettify](https://github.com/jonschlinkert/grunt-prettify)
+
+### Sass build structure:
+* [Evernote SASS Structure Boilerplate](https://github.com/evernote/sass-build-structure)
 
