@@ -13,8 +13,8 @@ npm install
 
 Once that's done, you will have added all the npm_modules necessary for the Grunt tasks to run.
 
-For additional help:
-[grunt]: http://gruntjs.com/
-[Getting Started]: https://github.com/gruntjs/grunt/blob/devel/docs/getting_started.md
-[package.json]: https://npmjs.org/doc/json.html
+### For additional help:
+* [grunt](http://gruntjs.com/)
+* [Getting Started](https://github.com/gruntjs/grunt/blob/devel/docs/getting_started.md)
+* [package.json](https://npmjs.org/doc/json.html)
 
