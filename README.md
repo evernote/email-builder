@@ -5,7 +5,7 @@
 ## Getting Started
 _If you haven't used [grunt][] before, be sure to check out the [Getting Started][] guide._
 
-From the same directory as your project's [Gruntfile][Getting Started] and [package.json][], install the build tasks from the package.json by running the following command:
+From the same directory as your project's Gruntfile and package.json, install the build tasks from the package.json by running the following command:
 
 ```bash
 npm install
