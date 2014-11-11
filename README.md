@@ -3,9 +3,9 @@
 > Evernote Email Builder is made up of Grunt tasks that allow our email builds to be more scaleable for re-using code, supporting multiple languages and leveraging new technologies like Sass.
 
 ## Getting Started
-_If you haven't used [grunt][] before, be sure to check out the [Getting Started][] guide._
+_If you haven't used [grunt][] before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide._
 
-From the same directory as your project's Gruntfile and package.json, install the build tasks from the package.json by running the following command:
+From the same directory as your project's [Gruntfile](http://gruntjs.com/api/grunt.file) and [package.json](https://www.npmjs.org/doc/files/package.json.html), install the build tasks from the package.json by running the following command:
 
 ```bash
 npm install
