@@ -2,6 +2,8 @@
 
 > Evernote Email Builder is made up of Grunt tasks that allow our email builds to be more scaleable for re-using code, supporting multiple languages and leveraging new technologies like Sass.
 
+> The email builder allows email developers to create Handlebars templates, JSON content, Sass that compiles to CSS and in the final HTML file inlines all the CSS.
+
 ## Getting Started
 _If you haven't used [grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide._
 
@@ -17,4 +19,11 @@ Once that's done, you will have added all the npm_modules necessary for the Grun
 * [grunt](http://gruntjs.com/)
 * [Getting Started](https://github.com/gruntjs/grunt/blob/devel/docs/getting_started.md)
 * [package.json](https://npmjs.org/doc/json.html)
+
+### Tasks used in build:
+* [Grunt Compile Handlebars](https://github.com/patrickkettner/grunt-compile-handlebars)
+* [Grunt Sass](https://github.com/sindresorhus/grunt-sass)
+* [Grunt Juice Email](https://github.com/disintegrator/grunt-juice-email)
+* [Grunt JSONLint](https://github.com/brandonramirez/grunt-jsonlint)
+* [Grunt Prettify](https://github.com/jonschlinkert/grunt-prettify)
 
