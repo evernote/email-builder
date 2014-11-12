@@ -1,10 +1,11 @@
 module.exports = function(grunt) {
 
+  // to change the template you want to compile into HTML update the global config variables
   var globalConfig = {
     language: 'en',
     data: 'welcome',
     template: 'welcome',
-    directory: 'welcome'
+    directory: 'messages'
   };
 
   if(grunt.option('lang') != undefined){

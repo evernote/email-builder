@@ -15,6 +15,30 @@ npm install
 
 Once that's done, you will have added all the npm_modules necessary for the Grunt tasks to run.
 
+To start the tasks as a watcher. The tasks will watch for changes in your templates, Sass, CSS, HTML and JSON files. To start the grunt watch simply run:
+
+```bash
+grunt
+```
+
+### Options
+In the gruntfile.js in the globalConfig object you can set the name of the template, JSON, language and directory name you want to build.
+
+```bash
+var globalConfig = {
+    language: 'en',
+    data: 'welcome',
+    template: 'welcome',
+    directory: 'messages'
+  };
+```
+
+You can also pass the variables through command line.
+
+```bash
+grunt compile-handlebars --directory=messages --data=welcome --template=welcome --lang=en
+```
+
 ## Directories:
 ### Templates
 The templates diretory can contain sub-directories that contain handlebars template files.
