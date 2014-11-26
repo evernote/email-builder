@@ -1,9 +1,28 @@
 {
-  "name": "Evernote-Email",
-  "version": "0.0.1",
+  "name": "evernote-email",
+  "version": "0.1.0",
   "description": "Grunt for Evernote Email",
   "repository": "https://github.com/evernote/email-builder",
   "author": "Ryan Burgess",
+  "keywords": [
+    "gruntplugin",
+    "build",
+    "email",
+    "juice",
+    "handlebars",
+    "grunt",
+    "tasks",
+    "evernote",
+    "builder",
+    "compiler"
+  ],
+  "scripts": {
+    "test": "grunt"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
   "devDependencies": {
     "grunt": "^0.4.4",
     "grunt-compile-handlebars": "~0.7.8",
@@ -14,5 +33,11 @@
     "grunt-prettify": "~0.3.5",
     "grunt-sass": "^0.16.1",
     "juice": "^0.4.0"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "licenses": {
+    "type": "MIT"
   }
 }
