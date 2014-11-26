@@ -5,6 +5,12 @@
 > The email builder allows email developers to create Handlebars templates, JSON content, Sass that compiles to CSS and in the final HTML file inlines all the CSS.
 
 ## Getting Started
+
+### Install
+```bash
+npm install evernote-email
+```
+
 _If you haven't used [grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide._
 
 From the same directory as your project's [Gruntfile](http://gruntjs.com/api/grunt.file) and [package.json](https://www.npmjs.org/doc/files/package.json.html), install the build tasks from the package.json by running the following command:
