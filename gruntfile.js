@@ -63,6 +63,10 @@ module.exports = function(grunt) {
           templateData: 'content/<%= globalConfig.directory %>/<%= globalConfig.data %>-<%= globalConfig.language %>.json',
           template: 'templates/<%= globalConfig.directory %>/<%= globalConfig.template %>.handlebars',
           output: 'build/<%= globalConfig.directory %>/<%= globalConfig.data %>-<%= globalConfig.language %>.html',
+          partials: [
+            'partials/*.handlebars',
+            'partials/language/<%= globalConfig.language %>/language.handlebars'
+          ],
           globals: [
           ],
         },
