@@ -1,5 +1,6 @@
 module.exports = function(grunt) {
-
+  var fs = require('fs');
+  
   // to change the template you want to compile into HTML update the global config variables
   var globalConfig = {
     language: 'en',
@@ -23,6 +24,22 @@ module.exports = function(grunt) {
   if(grunt.option('directory') != undefined){
     globalConfig.directory = grunt.option('directory');
   }
+
+  grunt.registerTask('email-builder', function(){
+      var filename = 'emails/content/'+ globalConfig.directory + '/'+ globalConfig.data +'-'+ globalConfig.language +'.json',
+        fileContent = fs.readFileSync(filename),
+        content = JSON.parse(fileContent);
+
+      if(globalConfig.language !== 'en'){
+        content.email[0].intl = 'yes';
+      }
+      
+      //Serialize as JSON and Write it to a file
+      fs.writeFileSync(filename, JSON.stringify(content, null, 4));
+
+      //call compile handlebars
+      grunt.task.run('compile-handlebars');
+  });
 
   grunt.initConfig({
     globalConfig: globalConfig,

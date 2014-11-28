@@ -42,7 +42,7 @@ var globalConfig = {
 You can also pass the variables through command line.
 
 ```bash
-grunt compile-handlebars --directory=messages --data=welcome --template=welcome --lang=en
+grunt email-builder --directory=messages --data=welcome --template=welcome --lang=en
 ```
 
 ## Directories:
