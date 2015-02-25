@@ -103,6 +103,13 @@ module.exports = function(grunt) {
         src: [ 'content/**/*.json' ]
       }
     },
+    'json-pretty': {
+      options: {
+        files: 'emails/content/',
+        indent: 4,
+        minify:false
+      },
+     },
      prettify: {
       options: {
         indent: 3,
@@ -162,6 +169,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-juice-email');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-newer');
+    grunt.loadNpmTasks('grunt-json-pretty');
     grunt.loadNpmTasks('grunt-jsonlint');
     grunt.registerTask('default',['watch']);
 };
