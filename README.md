@@ -30,19 +30,21 @@ grunt
 ### Options
 In the gruntfile.js in the globalConfig object you can set the name of the template, JSON, language and directory name you want to build.
 
-```bash
+```js
 var globalConfig = {
     language: 'en',
-    data: 'welcome',
-    template: 'welcome',
-    directory: 'messages'
+    content: 'welcome-content', // JSON file name without -lang
+    template: 'welcome-template', // template file name
+    contentDirectory: 'welcome', // content directory for JSON file
+    templateDirectory: 'messages', // template directory
+    buildDirectory: 'welcome-email' // final build directory name
   };
 ```
 
 You can also pass the variables through command line.
 
 ```bash
-grunt email-builder --directory=messages --data=welcome --template=welcome --lang=en
+grunt email-builder --content=welcome-content --template=welcome-template --contentDirectory=welcome --templateDirectory=messages --buildDirectory=welcome-email --lang=en
 ```
 
 ## Directories:

@@ -1,6 +1,6 @@
 {
   "name": "evernote-email",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Grunt for Evernote Email",
   "repository": "https://github.com/evernote/email-builder",
   "author": "Ryan Burgess",

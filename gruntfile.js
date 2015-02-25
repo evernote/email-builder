@@ -4,25 +4,35 @@ module.exports = function(grunt) {
   // to change the template you want to compile into HTML update the global config variables
   var globalConfig = {
     language: 'en',
-    data: 'welcome',
-    template: 'welcome',
-    directory: 'messages'
+    content: 'welcome-content', // JSON file name without -lang
+    template: 'welcome-template', // template file name
+    contentDirectory: 'welcome', // content directory for JSON file
+    templateDirectory: 'messages', // template directory
+    buildDirectory: 'welcome-email' // final build directory name
   };
 
   if(grunt.option('lang') != undefined){
     globalConfig.language = grunt.option('lang');
   }
 
-  if(grunt.option('data') != undefined){
-    globalConfig.data = grunt.option('data');
+  if(grunt.option('content') != undefined){
+    globalConfig.content = grunt.option('content');
   }
 
   if(grunt.option('template') != undefined){
     globalConfig.template = grunt.option('template');
   }
 
-  if(grunt.option('directory') != undefined){
-    globalConfig.directory = grunt.option('directory');
+  if(grunt.option('contentDirectory') != undefined){
+    globalConfig.contentDirectory = grunt.option('contentDirectory');
+  }
+
+  if(grunt.option('templateDirectory') != undefined){
+    globalConfig.templateDirectory = grunt.option('templateDirectory');
+  }
+
+  if(grunt.option('buildDirectory') != undefined){
+    globalConfig.buildDirectory = grunt.option('buildDirectory');
   }
 
   grunt.registerTask('email-builder', function(){
@@ -76,18 +86,18 @@ module.exports = function(grunt) {
       }
      },
      'compile-handlebars': {
-         allStatic: {
-          templateData: 'content/<%= globalConfig.directory %>/<%= globalConfig.data %>-<%= globalConfig.language %>.json',
-          template: 'templates/<%= globalConfig.directory %>/<%= globalConfig.template %>.handlebars',
-          output: 'build/<%= globalConfig.directory %>/<%= globalConfig.data %>-<%= globalConfig.language %>.html',
-          partials: [
-            'partials/*.handlebars',
-            'partials/language/<%= globalConfig.language %>/language.handlebars'
-          ],
-          globals: [
-          ],
-        },
+       allStatic: {
+        templateData: 'emails/content/<%= globalConfig.contentDirectory %>/<%= globalConfig.content %>-<%= globalConfig.language %>.json',
+        template: 'emails/templates/<%= globalConfig.templateDirectory %>/<%= globalConfig.template %>.handlebars',
+        output: 'build/<%= globalConfig.buildDirectory %>/<%= globalConfig.content %>-<%= globalConfig.language %>.html',
+        partials: [
+          'emails/partials/*.handlebars',
+          'emails/partials/language/<%= globalConfig.language %>/language.handlebars'
+        ],
+        globals: [
+        ],
       },
+    },
     jsonlint: {
       sample: {
         src: [ 'content/**/*.json' ]
