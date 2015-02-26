@@ -52,10 +52,10 @@ grunt email-builder --content=welcome-content --template=welcome-template --cont
 The templates diretory can contain sub-directories that contain handlebars template files.
 
 ### Content
-The content diretory can contain sub-directories that contain JSON files that are made up content that feeds into the handlebars templates. Each JSON file has a language code appended to the end of the filename. (Example: welcome-en.json).
+The content directory can contain sub-directories that contain JSON files that are made up content that feeds into the handlebars templates. Each JSON file has a language code appended to the end of the filename. (Example: welcome-en.json).
 
 ### Build
-The build diretory contains the final HTML email files that are compiled from the build. These files shouldn't be edited because the build will overwrite any changes made.
+The build directory contains the final HTML email files that are compiled from the build. These files shouldn't be edited because the build will overwrite any changes made.
 
 ### Sass
 Leveraging the [Evernote SASS Structure Boilerplate](https://github.com/evernote/sass-build-structure) this is where all the Sass files are saved.
